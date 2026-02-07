@@ -169,7 +169,7 @@ function Section3ValentineQuestion() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1, duration: 1 }}
                     >
-                        Happy Rose Day, Nidhi! 🌹
+                        Happy Rose Day, My Life! 🌹
                     </motion.p>
 
                     <motion.p
