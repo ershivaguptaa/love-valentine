@@ -1,0 +1,9 @@
+.rose-day-page {
+    position: relative;
+    background: linear-gradient(180deg, var(--color-midnight) 0%, var(--color-deep-blue) 100%);
+}
+
+.section {
+    position: relative;
+    z-index: 2;
+}

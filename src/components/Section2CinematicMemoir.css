@@ -1,0 +1,150 @@
+.cinematic-memoir-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-velvet) 100%);
+}
+
+/* Petal Explosion */
+.petal-explosion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.falling-petal {
+    position: absolute;
+    font-size: 40px;
+    filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.6));
+}
+
+/* Love Letter */
+.love-letter-container {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    perspective: 1000px;
+    z-index: 5;
+}
+
+.velvet-background {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(139, 0, 0, 0.3) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.letter-paper {
+    position: relative;
+    background: linear-gradient(135deg, #fffef0 0%, #f5f5dc 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.wax-seal {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    font-size: 50px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.letter-content {
+    font-family: 'Playfair Display', serif;
+    color: #2c1810;
+}
+
+.letter-greeting {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--color-velvet);
+}
+
+.letter-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.letter-signature {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: right;
+}
+
+.signature-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-crimson);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Scattered Petals on Letter */
+.letter-petals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.letter-petal {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.7;
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .letter-paper {
+        padding: 2rem 1.5rem;
+    }
+
+    .letter-greeting {
+        font-size: 1.5rem;
+    }
+
+    .letter-text {
+        font-size: 1rem;
+    }
+
+    .falling-petal {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,156 @@
+.valentine-question-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-velvet) 0%, var(--color-crimson) 100%);
+    overflow: hidden;
+}
+
+/* Question */
+.valentine-question {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+/* Button Container */
+.button-container {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    min-height: 80px;
+    align-items: center;
+}
+
+/* Valentine Buttons */
+.valentine-btn {
+    font-size: 1.3rem;
+    padding: 1.2rem 3rem;
+    min-width: 150px;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, var(--color-rose-gold), var(--color-gold));
+    color: var(--color-midnight);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.5);
+}
+
+.yes-btn:hover {
+    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.7);
+}
+
+.no-btn {
+    background: linear-gradient(135deg, #4a4a4a, #2a2a2a);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Tooltip */
+.tooltip-text {
+    font-size: 1.2rem;
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Celebration */
+.celebration-container {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+}
+
+.celebration-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.celebration-item {
+    position: absolute;
+    font-size: 40px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.celebration-title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+    position: relative;
+    z-index: 10;
+}
+
+.celebration-message {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--color-cream);
+    margin-bottom: 1rem;
+    font-style: italic;
+    position: relative;
+    z-index: 10;
+}
+
+.celebration-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: var(--color-rose-gold);
+    font-weight: 300;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .valentine-question {
+        font-size: 2.5rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .valentine-btn {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .celebration-title {
+        font-size: 2.5rem;
+    }
+
+    .celebration-message {
+        font-size: 1.8rem;
+    }
+
+    .celebration-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .celebration-item {
+        font-size: 30px;
+    }
+}

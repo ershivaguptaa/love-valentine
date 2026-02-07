@@ -1,0 +1,145 @@
+:root {
+  /* Color Palette */
+  --color-midnight: #0a1128;
+  --color-deep-blue: #1a2332;
+  --color-crimson: #dc143c;
+  --color-rose-gold: #d4af37;
+  --color-gold: #ffd700;
+  --color-cream: #fffdd0;
+  --color-velvet: #8b0000;
+  
+  /* Fonts */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-midnight);
+  color: var(--color-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom cursor trail effect */
+.cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--color-rose-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 9999;
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
+/* Button base styles */
+.btn {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-rose-gold), var(--color-gold));
+  color: var(--color-midnight);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+}
+
+/* Particle canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  color: var(--color-rose-gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+  }
+  
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
